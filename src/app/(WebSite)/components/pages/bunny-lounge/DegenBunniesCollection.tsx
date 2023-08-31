@@ -19,7 +19,7 @@ export default function DegenBunniesCollection({imageUrl, name, status, children
   return <Box sx={{p: '10px', width: {xs: '100%', md: '400px', lg: '500x'}}} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center">
     <Image src={imageUrl} alt={name} width="500" height="500" style={{width: '100%', height: 'auto', maxWidth: '500px'}}/>
     <Box flexGrow={1} sx={{textAlign: 'center'}}>
-      <Typography mb="1rem" sx={{textTransform: 'uppercase', fontWeight: 600, fontSize: '1.4rem', m: '10px'}} noWrap>
+      <Typography mb="1rem" sx={{textTransform: 'uppercase', fontWeight: 600, fontSize: {xs: '1rem', md: '1.4rem'}, m: '10px'}} noWrap>
         {name}
       </Typography>
       <Typography mb="0.5rem">
