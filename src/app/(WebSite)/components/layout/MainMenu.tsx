@@ -14,10 +14,15 @@ interface MenuProps {
 export default function MainMenu({
   name, link, target, splashImage, setCurrentSplashImage, hoveredMenu, setHoveredMenu,
 }: MenuProps) {
-  return <Box sx={{mr: {xs: '0px', lg: '2rem'}, cursor: 'pointer'}} onMouseEnter={() => {
-    setHoveredMenu(name);
-    setCurrentSplashImage(splashImage);
-  }}>
+  return <Box sx={{mr: {xs: '0px', lg: '2rem'}, cursor: 'pointer'}}
+              onTouchStart={() => {
+                setHoveredMenu(name);
+                setCurrentSplashImage(splashImage);
+              }}
+              onMouseEnter={() => {
+                setHoveredMenu(name);
+                setCurrentSplashImage(splashImage);
+              }}>
     <a href={link} target={target} style={{color: 'black', textDecoration: 'none'}}>
       <Typography sx={{fontSize: {xs: '1.5rem', lg: '2rem'}, fontWeight: '600'}} noWrap>
         {name}

@@ -16,7 +16,11 @@ export default function SubMenu({name, link, target, hoveredMenu, setHoveredMenu
   const selectedMenu = pathname === link;
   const hovered = selectedMenu || hoveredMenu === name;
 
-  return (<Box sx={{mt: '10px', mr: '50px'}} onMouseEnter={() => setHoveredMenu(name)} onMouseLeave={() => setHoveredMenu('')}>
+  return (<Box sx={{mt: '10px', mr: '50px'}}
+               onTouchStart={() => setHoveredMenu(name)}
+               onTouchEnd={() => setHoveredMenu('')}
+               onMouseEnter={() => setHoveredMenu(name)}
+               onMouseLeave={() => setHoveredMenu('')}>
     <a href={selectedMenu ? '#' : link} target={target} style={{color: 'white', textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Typography sx={{fontSize: '1.1rem', textAlign: 'center'}}>
         {name}

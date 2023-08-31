@@ -22,6 +22,8 @@ export default function SocialLinkButton({
         icon={icon}
         beat={over}
         style={{margin: 10, height: height, cursor: 'pointer', color: color}}
+        onTouchStart={() => setOver(true)}
+        onTouchEnd={() => setOver(false)}
         onMouseOver={() => setOver(true)}
         onMouseLeave={() => setOver(false)}
     />
