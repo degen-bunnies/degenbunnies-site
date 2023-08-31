@@ -7,14 +7,16 @@ import * as React from 'react';
 import {Big_Shoulders_Inline_Display} from 'next/font/google';
 import Profile from '@/app/(WebSite)/components/pages/about-us/Profile';
 import SocialLinkButton from '@/app/(WebSite)/components/buttons/SocialLinkButton';
-import {faDiscord, faXTwitter} from '@fortawesome/free-brands-svg-icons';
-import {JpgStoreIcon} from '@/app/(WebSite)/components/icons/JpgStoreIcon';
+import {faDiscord} from '@fortawesome/free-brands-svg-icons';
 
 const bigShoulders = Big_Shoulders_Inline_Display({subsets: ['latin']});
 
 export default function BunnyLounge() {
 
   const allImages: string[] = [];
+  ['bob', 'jenny', 'kira', 'will'].forEach((name) => {
+    allImages.push(`/images/avatar/${name}-left.png`, `/images/avatar/${name}-right.png`);
+  });
   const allImagesLoaded = useOnLoadImages(allImages);
 
   return (<PageContainer loaded={allImagesLoaded}
