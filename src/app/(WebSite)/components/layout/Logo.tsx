@@ -9,6 +9,6 @@ interface LogoProp {
 
 export default function Logo({sx = {width: {xs: '30vw', lg: '15vw', maxWidth: '300px'}}}: LogoProp) {
   return (<Box sx={sx}>
-    <Image src="/images/DegenBunnies-Logo.png" alt={'Degen Bunnies Logo'} width={1581} height={896} style={{width: '100%', height: 'auto', maxWidth: '300px'}}/>
+    <Image src="/images/DegenBunnies-Logo.png" alt={'Degen Bunnies Logo'} width={1581} height={896} priority style={{width: '100%', height: 'auto', maxWidth: '300px'}}/>
   </Box>);
 }

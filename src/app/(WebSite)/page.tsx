@@ -1,6 +1,6 @@
 'use client';
 
-import {Box} from '@mui/material';
+import {Box, useMediaQuery, useTheme} from '@mui/material';
 import * as React from 'react';
 import {useState} from 'react';
 
@@ -19,6 +19,8 @@ export default function Home() {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>('BUNNY LOUNGE');
   const allImages = ['/images/DegenBunnies-Logo.png', '/images/DegenBunny-Droid.png', '/images/Degen-Bunny-The-Dunk-Master.png', '/images/Degen-Bunnies-The-Angel.png'];
   const allImagesLoaded = useOnLoadImages(allImages);
+  const theme = useTheme();
+  const mdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   return (<PageContainer loaded={allImagesLoaded}
                          title="DegenBunnies - Cardano forever"
@@ -27,7 +29,11 @@ export default function Home() {
 
       <Logo/>
 
-      <SplashImage image={currentSplashImage}/>
+      <Box position="relative" display="flex" justifyContent="center" sx={{width: '100%', height: mdUp ? '40vh' : '35vh', marginBottom: '10vh'}}>
+        <SplashImage image="/images/DegenBunny-Droid.png" visible={currentSplashImage === '/images/DegenBunny-Droid.png'}/>
+        <SplashImage image="/images/Degen-Bunny-The-Dunk-Master.png" visible={currentSplashImage === '/images/Degen-Bunny-The-Dunk-Master.png'}/>
+        <SplashImage image="/images/Degen-Bunnies-The-Angel.png" visible={currentSplashImage === '/images/Degen-Bunnies-The-Angel.png'}/>
+      </Box>
 
       {/*start menu layout*/}
       <Box display="flex" justifyContent="center" flexDirection={{xs: 'column', lg: 'row'}} alignItems="center">
