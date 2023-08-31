@@ -1,0 +1,29 @@
+.underline-path {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: drawLine 1s forwards;
+}
+
+.selected-underline-path {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 0;
+}
+
+.removed-underline-path {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  /*stroke-dashoffset: 0;*/
+  /*animation: eraseLine 0.1s forwards;*/
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes eraseLine {
+  to {
+    stroke-dashoffset: 350;
+  }
+}

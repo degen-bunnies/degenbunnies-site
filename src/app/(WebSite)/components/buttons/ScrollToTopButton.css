@@ -1,0 +1,74 @@
+#back-to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80.6px;
+  height: 83.7px;
+  right: 40px;
+  bottom: 40px;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 680px) {
+  #back-to-top {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+
+.back-to-top-text {
+  position: absolute;
+  font-family: Outfit, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  line-height: 1.25em;
+  top: 34px;
+  transition: all 0.3s ease-out;
+}
+
+.back-to-top-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.button-outline {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-miterlimit: 10;
+}
+
+.predefined {
+  mix-blend-mode: difference;
+}
+
+.predefined .back-to-top-text {
+  color: #fff;
+}
+
+.predefined .button-outline {
+  stroke: #fff;
+}
+
+#back-to-top.on {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top.off {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, visibility 0s 0.15s;
+}
