@@ -1,10 +1,11 @@
 import {subMenus} from '@/app/(WebSite)/components/layout/menus';
-import {Box, Drawer, useMediaQuery, useTheme} from '@mui/material';
+import {Box, Drawer, IconButton, useMediaQuery, useTheme} from '@mui/material';
 import Logo from '@/app/(WebSite)/components/layout/Logo';
 import * as React from 'react';
 import {useState} from 'react';
 import SubMenu from '@/app/(WebSite)/components/layout/SubMenu';
-import Hamburger from 'hamburger-react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
   const [iMenuSidebarOpen, setMenuSidebarOpen] = useState(false);
@@ -28,14 +29,16 @@ export default function Navigation() {
           setHoveredMenu={setHoveredMenu}
       />))}
     </>) : (<>
-      <Hamburger toggled={iMenuSidebarOpen} toggle={setMenuSidebarOpen}/>
+      <IconButton color="inherit" aria-label="open drawer" edge="end" onClick={() => setMenuSidebarOpen(true)}>
+        <FontAwesomeIcon icon={faBars}/>
+      </IconButton>
       <Drawer
           anchor="top"
           open={iMenuSidebarOpen}
           onClose={() => setMenuSidebarOpen(false)}
           sx={{
             '& .MuiDrawer-paper': {
-              background: 'black'
+              background: 'black',
             },
           }}
       >
