@@ -116,7 +116,7 @@ export default function BunnyLounge() {
             DEGEN BUNNIES MANIFESTO
           </Typography>
 
-          <Typography sx={{m: '50px', textAlign: 'center', fontSize: '1.2rem', lineHeight: '1.9rem', wordSpacing: '0.05rem', letterSpacing: '0.05rem'}}>
+          <Typography sx={{m: '50px', textAlign: 'center', fontSize: {xs: '1rem', md: '1.2rem'}, lineHeight: '1.9rem', wordSpacing: '0.05rem', letterSpacing: '0.05rem'}}>
             We’ve stayed down the bunny hole<br/>
             For quite a long time<br/>
             Now it’s time to take our role,<br/>
