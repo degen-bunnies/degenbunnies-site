@@ -49,7 +49,12 @@ export default function ScrollToTopButton() {
   };
 
   return (<Box id="back-to-top" className={`predefined ${isVisible ? 'on' : 'off'}`}
-               onClick={handleClick} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+               onClick={handleClick}
+               onTouchStart={() => setHovered(true)}
+               onTouchEnd={() => setHovered(false)}
+               onMouseEnter={() => setHovered(true)}
+               onMouseLeave={() => setHovered(false)}
+  >
     <span className="back-to-top-text">Top</span>
     <span className="back-to-top-icon">
         <svg className="svg--back-to-top" xmlns="http://www.w3.org/2000/svg" width="80.6px" height="83.7px" viewBox="0 0 80.6 83.7">

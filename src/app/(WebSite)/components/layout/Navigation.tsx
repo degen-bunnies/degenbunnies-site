@@ -35,7 +35,7 @@ export default function Navigation() {
           onClose={() => setMenuSidebarOpen(false)}
           sx={{
             '& .MuiDrawer-paper': {
-              top: '100px', background: 'black', boxSizing: 'border-box', maxWidth: 'calc(100% - 17px)'
+              background: 'black'
             },
           }}
       >
