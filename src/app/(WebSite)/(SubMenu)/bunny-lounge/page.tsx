@@ -92,7 +92,7 @@ export default function BunnyLounge() {
             </DegenBunniesCollection>
             <Box width={{xs: '0px', md: '80px'}} height={{xs: '30px', md: '0px'}}/>
             <DegenBunniesCollection imageUrl="/images/Ancient-bunnies.png" name="Degen Bunnies ancient collection" status="Sold out."
-                                    link="https://www.jpg.store/collection/degenbunnies">
+                                    link="https://www.jpg.store/collection/degenbunniesancients">
               The Ancient collection consists of 555 NFTs and was launched in January 2023. Selected holders burned OG bunnies to receive Ancient bunnies in return.
             </DegenBunniesCollection>
           </Box>
